@@ -54,4 +54,4 @@ async def show_products(m, products):
             text = f'<b>{title}</b>\n\n{body}\n\n<b>Tgl Upload:</b> {price}'
 
             await m.answer_photo(photo=image,
-                                 caption=text
+                                 caption=text)
