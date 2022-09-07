@@ -70,7 +70,7 @@ async def process_send_answer(message: Message, state: FSMContext):
         question = db.fetchone(
             'SELECT question FROM questions WHERE cid=?', (cid,))[0]
         db.query('DELETE FROM questions WHERE cid=?', (cid,))
-        text = f'===========================\n<b>[Data Kamu]</b>\n===========================\n{question}\n===========================\n\n===========================\n<b>Sistem Bot</b>\n===========================\n{answer}\n==========================='
+        text = f'===========================\n<b>Data anda</b>\n===========================\n{question}\n===========================\n\n===========================\n<b>Hasil Persetujuan</b>\n===========================\n{answer}\n==========================='
 
         await message.answer('Terkirim!', reply_markup=ReplyKeyboardRemove())
         await bot.send_message(cid, text)
