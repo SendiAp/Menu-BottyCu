@@ -11,7 +11,7 @@ from loader import dp, db
 @dp.message_handler(commands='daftar_admin')
 async def cmd_sos(message: Message):
     await SosState.question.set()
-    await message.answer('📋 • Silakan isi Biodata Dibawah •\n\nNama :\nUmur :\nJenis Kelamanin :\nAsal Kota :\nPendidikan :\nTanggal.Bulan.Tahun Lahir :\nKesibukan :\nUsername Telegram :\n\n◻️ NB : Kami Tidak Menerima Laki Laki.', reply_markup=ReplyKeyboardRemove())
+    await message.answer('<b>Silakan isi Biodata Dibawah:</b>\n\nNama :\nUmur :\nJenis Kelamanin :\nAsal Kota :\nPendidikan :\nTanggal.Bulan.Tahun Lahir :\nKesibukan :\nUsername Telegram :\n\n◻️ <b>Syarat Dan Ketentuan:</b>\n• Wanita Umur 19+\n• Tidak Boleh Penasaran\n• Tidak Boleh Terpaksa\n• Tidak Mudah Bosan\n• Berpengalaman\n\n◾ <b>Kelebihan:</b>\n• Bisa Mengambil Manfaat Dari Seseorang Curhat.\n\n◾ <b>Kekurangan:</b>\n• Unpaid', reply_markup=ReplyKeyboardRemove())
 
 
 @dp.message_handler(state=SosState.question)
